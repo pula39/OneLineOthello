@@ -100,15 +100,22 @@
       canvas.style.height = "100%";
 
       var resizeFun = function(event){
-        var windowWidth = window.screen.width;
-        var windowHeight = window.screen.height;
+        var windowWidth = document.querySelector("#unity-container").clientWidth;
+        var windowHeight = document.querySelector("#unity-container").clientHeight;
         var window_aspect_ratio = windowWidth * 1.0 / windowHeight;
         var preferred_aspect_ratio = 16.0 / 9.0;
 
         if(window_aspect_ratio >= preferred_aspect_ratio){
+          // widrh 3200 heigh 900 
+          // width should ne 1600
+          // width = 900 * (16 / 9) = 1600
           width = preferred_aspect_ratio * windowHeight;
           height = windowHeight;
         }else{
+          // widrh 1600 heigh 20000 
+          // height should be 900 
+          // 
+          // height = 900 / (16 / 9) = 900
           width = windowWidth;
           height =  windowWidth / preferred_aspect_ratio;
         }
@@ -119,6 +126,8 @@
         canvas.width = width + "px";
         canvas.height = height + "px";
         console.log("Resize me! ")
+        console.log("window width", width)
+        console.log("window height", height)
         console.log("window width", windowWidth)
         console.log("window height", windowHeight)
         // console.log(newWidth)
