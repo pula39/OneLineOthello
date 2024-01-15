@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | OneLineOthello</title>
+    <title>OneLineOthello</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div id="unity-container" class="unity-mobile">
+    <div id="unity-container">
       <canvas id="unity-canvas" style="width: 1440px; height: 900px; cursor: default;">
       </canvas>
       <div id="unity-loading-bar">
@@ -17,21 +17,14 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-warning"> </div>
       <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">OneLineOthello</div>
       </div>
     </div>
     <script>
 
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-      var warningBanner = document.querySelector("#unity-warning");
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -98,6 +91,9 @@
 
 
       loadingBar.style.display = "block";
+      canvas.style.width =  "100%";
+      canvas.style.height = "100%";
+
 
       var script = document.createElement("script");
       script.src = loaderUrl;
