@@ -123,13 +123,17 @@
         // var newWidth = canvas.getBoundingClientRect().width;
         // var newHeight = newWidth * (9.0 / 16.0);
 
-        canvas.width = width + "px";
-        canvas.height = height + "px";
+        // canvas.width = width + "px";
+        // canvas.height = height + "px";
+        canvas.style.width = width + "px";
+        canvas.style.width = height + "px";
         console.log("Resize me! ")
         console.log("window width", width)
         console.log("window height", height)
-        console.log("window width", windowWidth)
-        console.log("window height", windowHeight)
+        console.log("window original width", windowWidth)
+        console.log("window original height", windowHeight)
+        console.log("canvas width", canvas.width)
+        console.log("canvas height", canvas.height)
         // console.log(newWidth)
         // console.log(newHeight)
         console.dir(canvas.style)
