@@ -16,7 +16,7 @@ body {
 
 #unity-container.unity-desktop { left: 100%; top: 100%; }
 #unity-container.unity-mobile {
-    position: flex;
+    display: flex;
     height: 100%;
     align-items: center;
     justify-content: center;
