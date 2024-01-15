@@ -100,8 +100,8 @@
       canvas.style.height = "100%";
 
       var resizeFun = function(event){
-        var windowWidth = window.innerWidth;
-        var windowHeight = window.innerHeight;
+        var windowWidth = window.screen.width;
+        var windowHeight = window.screen.height;
         var window_aspect_ratio = windowWidth * 1.0 / windowHeight;
         var preferred_aspect_ratio = 16.0 / 9.0;
 
