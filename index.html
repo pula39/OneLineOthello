@@ -98,6 +98,34 @@
       canvas.style.width =  "100%";
       canvas.style.height = "100%";
 
+      canvas.style.width = "100%";
+      canvas.style.height = "100%";
+
+      var resizeFun = function(event){
+        var window_aspect_ratio = $(window).width() * 1.0 / $(window).height();
+        var preferred_aspect_ratio = 16.0 / 9.0;
+
+        if(window_aspect_ratio >= preferred_aspect_ratio){
+          width = preferred_aspect_ratio * $(window).height();
+          height = $(window).height();
+        }else{
+          width = $(window).width();
+          height = preferred_aspect_ratio *  $(window).width();
+        }
+
+        // var newWidth = canvas.getBoundingClientRect().width;
+        // var newHeight = newWidth * (9.0 / 16.0);
+
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
+        console.log("Resize me! ")
+        // console.log(newWidth)
+        // console.log(newHeight)
+        console.dir(canvas.style)
+      }
+      window.addEventListener('resize', resizeFun);
+
+      resizeFun(null)
 
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -117,6 +145,5 @@
       document.body.appendChild(script);
 
     </script>
-    <script src="https://unityroom.com/template/resize_canvas.js" data-width="1280" data-height="720" data-window-fit="contain" data-target="canvas"></script>
   </body>
 </html>
