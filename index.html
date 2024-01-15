@@ -100,15 +100,17 @@
       canvas.style.height = "100%";
 
       var resizeFun = function(event){
-        var window_aspect_ratio = window.width * 1.0 / window.height;
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var window_aspect_ratio = windowWidth * 1.0 / windowHeight;
         var preferred_aspect_ratio = 16.0 / 9.0;
 
         if(window_aspect_ratio >= preferred_aspect_ratio){
-          width = preferred_aspect_ratio * window.height;
-          height = window.height;
+          width = preferred_aspect_ratio * windowHeight;
+          height = windowHeight;
         }else{
-          width = window.width;
-          height = preferred_aspect_ratio *  window.width;
+          width = windowWidth;
+          height = preferred_aspect_ratio *  windowWidth;
         }
 
         // var newWidth = canvas.getBoundingClientRect().width;
@@ -117,8 +119,8 @@
         canvas.width = width + "px";
         canvas.height = height + "px";
         console.log("Resize me! ")
-        console.log("window width", window.width)
-        console.log("window height", window.height)
+        console.log("window width", windowWidth)
+        console.log("window height", windowHeight)
         // console.log(newWidth)
         // console.log(newHeight)
         console.dir(canvas.style)
