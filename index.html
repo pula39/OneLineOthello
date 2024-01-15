@@ -95,8 +95,6 @@
 
 
       loadingBar.style.display = "block";
-      canvas.style.width =  "100%";
-      canvas.style.height = "100%";
 
       canvas.style.width = "100%";
       canvas.style.height = "100%";
@@ -119,6 +117,8 @@
         canvas.width = width + "px";
         canvas.height = height + "px";
         console.log("Resize me! ")
+        console.log("window width", window.width)
+        console.log("window height", window.height)
         // console.log(newWidth)
         // console.log(newHeight)
         console.dir(canvas.style)
