@@ -78,22 +78,22 @@
       // config.matchWebGLToCanvasSize = false;
 
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-      canvas.style.width = "100%";
-      canvas.style.height = "100%";
+      // canvas.style.width = "100%";
+      // canvas.style.height = "100%";
 
-      var resizeFun = function(event){
-        var newWidth = canvas.getBoundingClientRect().width;
-        var newHeight = newWidth * (9.0 / 16.0);
+      // var resizeFun = function(event){
+      //   var newWidth = canvas.getBoundingClientRect().width;
+      //   var newHeight = newWidth * (9.0 / 16.0);
 
-        canvas.style.height = newHeight + "px";
-        console.log("Resize me! ")
-        console.log(newWidth)
-        console.log(newHeight)
-        console.dir(canvas.style)
-      }
-      window.addEventListener('resize', resizeFun);
+      //   canvas.style.height = newHeight + "px";
+      //   console.log("Resize me! ")
+      //   console.log(newWidth)
+      //   console.log(newHeight)
+      //   console.dir(canvas.style)
+      // }
+      // window.addEventListener('resize', resizeFun);
 
-      resizeFun(null)
+      // resizeFun(null)
 
 
 
