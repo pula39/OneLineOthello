@@ -102,15 +102,15 @@
       canvas.style.height = "100%";
 
       var resizeFun = function(event){
-        var window_aspect_ratio = $(window).width() * 1.0 / $(window).height();
+        var window_aspect_ratio = window.width() * 1.0 / window.height();
         var preferred_aspect_ratio = 16.0 / 9.0;
 
         if(window_aspect_ratio >= preferred_aspect_ratio){
-          width = preferred_aspect_ratio * $(window).height();
-          height = $(window).height();
+          width = preferred_aspect_ratio * window.height();
+          height = window.height();
         }else{
-          width = $(window).width();
-          height = preferred_aspect_ratio *  $(window).width();
+          width = window.width();
+          height = preferred_aspect_ratio *  window.width();
         }
 
         // var newWidth = canvas.getBoundingClientRect().width;
