@@ -1,6 +1,6 @@
 body { padding: 0; margin: 0 }
 #unity-container { position: absolute }
-#unity-container.unity-desktop { left: 100%; top: 100%; transform: translate(-50%, -50%) }
+#unity-container.unity-desktop { left: 100%; top: 100%; }
 #unity-container.unity-mobile {
     position: flex;
     height: 100%;
